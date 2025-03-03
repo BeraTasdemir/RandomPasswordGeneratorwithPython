@@ -19,11 +19,11 @@ def generate_and_display():
 
 def copy_to_clipboard():
     pyperclip.copy(password_entry.get())
-    messagebox.showinfo("Bilgi", "Şifre kopyalandı!")
+    messagebox.showinfo("info", "Copied password!")
 
 # main window
 root = tk.Tk()
-root.title("Şifre Üretici")
+root.title("Password generator")
 root.geometry("400x200")
 root.resizable(False, False)
 
@@ -32,10 +32,10 @@ password_entry = tk.Entry(root, width=30, font=("Arial", 12), justify="center")
 password_entry.pack(pady=10)
 
 # buttons
-generate_button = tk.Button(root, text="Şifre Üret", command=generate_and_display)
+generate_button = tk.Button(root, text="Generate password", command=generate_and_display)
 generate_button.pack(pady=5)
 
-copy_button = tk.Button(root, text="Kopyala", command=copy_to_clipboard)
+copy_button = tk.Button(root, text="Copy", command=copy_to_clipboard)
 copy_button.pack(pady=5)
 
 # run the interface
